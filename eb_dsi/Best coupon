@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        double discount1 = x*0.10;
+        double discount2 = 100;
+        double maxDiscount = Math.max(discount1, discount2);
+        int finalAmount = (int)(x - maxDiscount);
+        System.out.println(finalAmount);
+    }
+}
