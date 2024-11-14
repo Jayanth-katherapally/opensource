@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n = sc.nextInt();
+        int numDigits = String.valueOf(n).length();
+        int sum = 0, temp = n;
+        while (temp > 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, numDigits);
+            temp /= 10;
+        }
+        
+        System.out.println(sum == n ? "Yes" : "No");
+    }
+}
